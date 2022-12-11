@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: wapp01
+  namespace: student
+
+spec:
+  selector:
+    app: wapp-depl
+  ports:
+    - targetPort: 8080
+      port: 8099
+
+

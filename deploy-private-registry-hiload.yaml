@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bbox-deploy
+  labels:
+    app: bbox
+spec:
+  selector:
+    matchLabels:
+      app: bbox
+  replicas: 2
+  strategy:
+    type: RollingUpdate  
+  template:
+    metadata:
+      labels:
+        app: bbox
+    spec:
+      containers:
+      - name: bbox-loads
+      - image: dock01:5002/busy:5
+      - command: ["dd"]
+      - args: ["if=/dev/zero","of=/dev/null","bs=4096"]
+      - resources:
+            limits:
+              cpu: 250m
+              memory: 30Mi
+            requests:
+              cpu: 200m
+              memory: 20Mi
+      imagePullSecrets:
+      - name: secret1
+

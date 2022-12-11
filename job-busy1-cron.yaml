@@ -1,0 +1,22 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: greets-cron
+
+spec:
+  schedule: "*/2 * * * 1-5"
+  concurrencyPolicy: Allow
+  jobTemplate:
+        spec:
+          backoffLimit: 2
+          activeDeadlineSeconds: 60
+          ttlSecondsAfterFinished: 15
+          template:
+            spec:
+              containers:
+                - name: greets-cron
+                  image: busybox
+                  command: ["/bin/sh"]
+                  args: ["-c", "echo Hello, Andrei! Start job at `date` ... && sleep 15 && echo ..its done, by!"]      
+
+              restartPolicy: Never    
