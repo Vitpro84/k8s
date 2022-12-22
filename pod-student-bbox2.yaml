@@ -1,9 +1,11 @@
 apiVersion: v1
 kind: Pod
 metadata: 
-  name: students-pod2
+  name: students-pod-dock02
   namespace: student
 spec:
+  nodeSelector:
+    kubernetes.io/hostname: dock03     
   containers:
     - name: bb1
       image: busybox
