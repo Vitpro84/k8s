@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wapp5-form
+  namespace: stada
+  labels:
+    k8s-app: wapp5-form
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      k8s-app: wapp5-form
+  template:
+    metadata:
+      name: wapp5-form
+      labels:
+        k8s-app: wapp5-form
+    spec:
+      containers:
+        - name: wapp5-form
+          image: a0z9/dock:wapp.0.5
+          env:
+            - name: DOCK_HOST
+              value: STADA_HOST
+            - name: VERSION
+              value: '2.0'
+          resources:
+            limits:
+              memory: 450Mi
+              cpu: 500m
+            requests:
+              memory: 200Mi
+
