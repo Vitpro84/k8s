@@ -1,0 +1,1129 @@
+    1  poweroff
+    2  id
+    3  dockeeeeeer ps
+    4  docker ps -a
+    5  docker stop cf -f
+    6  docker stop cf
+    7  docker rm -f cf
+    8  cd docker/app1
+    9  ls
+   10  docker ps
+   11  docker restart gst1
+   12  docker ps
+   13  docker stop gst1
+   14  sudo service docker restart
+   15  docker
+   16  docker ps
+   17  sudo service docker stop
+   18  sudo service docker start
+   19  docker start gst1
+   20  docker ps
+   21  ls -la tars
+   22  ls -la ../tars
+   23  docker import --help
+   24  docker import ../tars/bbox2.tar bbox2:2.1
+   25  docker images
+   26  cd ../tars/
+   27  c++
+   28  vim hi.c
+   29  c++ hi.c -o hi
+   30  ./hi
+   31  ls -la
+   32  tar -cf hi.tar hi 
+   33  mc
+   34  docker import hi.tar hi:1.0
+   35  docker images
+   36  docker run --rm -d hi:1.0 ./hi
+   37  docker run --rm -i hi:1.0 ./hi
+   38  c++ hi.c --static -o hi2
+   39  ls -la
+   40  ./h2
+   41  ./h
+   42  ./h\\
+   43  ./hu
+   44  ./hi
+   45  ./hi2
+   46  tar -cf hi2.tar hi2
+   47  docker import hi2.tar hi:2.0
+   48  docker run --rm -i hi:2.0 ./hi2
+   49  docker run  -i hi:2.0 ./hi2
+   50  docker ps -a
+   51  docker start bbox2
+   52  docker start bbox1
+   53  docker container prune -f
+   54  docker ps -a
+   55  docker run --rm -i hi:2.0 ./hi2
+   56  ps aux | grep busybox
+   57  docker ps
+   58  id
+   59  sudo groupadd -aG docker stident
+   60  sudo groupadd -aG docker student
+   61  sudo groupmod -aG docker student
+   62  sudo usermod -aG docker student
+   63  id
+   64  groups
+   65  newgrp docker
+   66  sudo service docker status
+   67  cat docker/scripts/install-docker
+   68  sudo usermod -aF docker student
+   69  sudo usermod -aG docker student
+   70  id
+   71  groups
+   72  docker ps
+   73  poweroff -a
+   74  docker ps -a
+   75  docker images
+   76  docker run --help
+   77  docker search getting
+   78  docker search getting --filter=stars=1
+   79  docker search mysql --filter=stars=1
+   80  docker run -d -p 8080:80 --name gst1 docker/getting-started
+   81  docker images
+   82  docker ps
+   83  docker run -d -p 8081:80 docker/getting-started
+   84  docker run -d -p 8082:80 docker/getting-started
+   85  docker ps
+   86  docker run -d -p 8082:80 docker/getting-started
+   87  docker ps
+   88  docker ps -a
+   89  docker rm 8
+   90  docker ps -a
+   91  docker logs gst1
+   92  docker ps -a
+   93  docker logs 3
+   94  docker top 3
+   95  docker ps
+   96  docker ps -q
+   97  docker stop $(docker ps -q)
+   98  docker ps -a
+   99  docker start $(docker ps -qa)
+  100  docker ps -a
+  101  docker ps
+  102  docker rm -f 2 3
+  103  docker ps
+  104  docker pull busybox
+  105  docker images
+  106  docker run -dit --name bbox1 busybox
+  107  docker ps
+  108  docker attach bbox1 
+  109  docker ps
+  110  docker ps -a
+  111  docker start bbox1 
+  112  docker ps -a
+  113  docker attach bbox1 
+  114  docker attach bbox1 --detach-keys 'ctrl-p'
+  115  cd docker
+  116  mkdir app1
+  117  cd app1
+  118  gedit
+  119  cat data1 
+  120  mcedit
+  121  cat data1 
+  122  cat data2
+  123  docker cp data1 bbox1:/app45
+  124  docker exec bbox1 ls
+  125  docker exec bbox1 mkdir app6
+  126  docker exec bbox1 ls
+  127  docker exec bbox1 bash ls
+  128  docker exec bbox1 sh ls
+  129  docker exec bbox1 sh -c ls
+  130  docker run -d busybox
+  131  docker ps -a
+  132  docker run -di busybox
+  133  docker ps -a
+  134  docker attach cf
+  135  docker run -d busybox ping 8.8.8.8
+  136  docker ps
+  137  docker logs bc
+  138  docker ps -a
+  139  docker rm 9
+  140  docker ps -a
+  141  docker exec gst1 ls -la
+  142  docker exec gst1 ls
+  143  docker exec bbox1 ls
+  144  docker commit bbox1 busybox-my
+  145  docker images 
+  146  docker tag 75 busybox-my:1.0
+  147  docker images 
+  148  docker rmi busybox-my:latest 
+  149  docker ps -a
+  150  docker rm -f bc
+  151  docker rm -f bbox1
+  152  docker rm -f bc
+  153  docker ps -a
+  154  docker rmi busybox
+  155  docker images
+  156  docker run -dit --name bbox1 busybox-my:1.0
+  157  docker ps
+  158  docker exec bbox1 ls
+  159  docker images
+  160  docker tag 75 a0z9
+  161  /
+  162  docker tag 75 a0z9 a0z9/bboxmy:1.0
+  163  docker tag 75 a0z9/bboxmy:1.0
+  164  docker images
+  165  docker rmi a0z9:latest 
+  166  docker images
+  167  docker login
+  168  docker push a0z9/bboxmy:1.0 
+  169  mcedit
+  170  cd ..
+  171  git add .
+  172  git commit -m 'dockerfile'
+  173  git config --global user.name a0z9
+  174  git config --global user.email a0z9@rambler.ru
+  175  git commit -m 'dockerfile'
+  176  docker push
+  177  git push
+  178  git pull
+  179  cd
+  180  cd docker
+  181  git pull
+  182  cd app1
+  183  cat dockerfile 
+  184  vim dockerfile 
+  185  docker build -t bboxmy:2.0 .
+  186  docker images
+  187  docker run -dit --name bbox2 bboxmy:2.0
+  188  docker ps
+  189  docker exec bbox2 enc
+  190  docker exec bbox2 env
+  191  docker exec bbox2 ls /
+  192  docker exec bbox2 cat /localdir/data
+  193  docker images
+  194  docker tag bboxmy:2.0 a0z9/bboxmy:2.0
+  195  docker push a0z9/bboxmy:2.0
+  196  cd ..
+  197  mkdir history
+  198  history > history/history_day1_1
+  199  git add .
+  200  git commit -m 'day1 commit'
+  201  git push
+  202  docker image pull nginx:1.22.1
+  203  docker image pull docker.io/library/nginx:1.22.2
+  204  docker image pull docker.io/library/nginx:1.22.0
+  205  docker image pull nginx@sha256:f0d28f2047853cbc10732d6eaa1b57f1f4db9b017679b9fd7966b6a2f9ccc2d1
+  206  docker images
+  207  docker images --digests 
+  208  docker images
+  209  docker ps
+  210  docker export --help
+  211  mkdir tars
+  212  docker export bbox2 -o tars/bbox2.tar
+  213  docker export gst1  -o tars/gst1.tar
+  214  mc
+  215  docker inspect gst1
+  216  docker inspect gst1 --format {{ .Config.Ports }}
+  217  docker inspect gst1 --format {{ .NetworkSettings.Ports }}
+  218  docker inspect gst1 --format {{ .HostConfig.NetworkSettings.Ports }}
+  219  docker inspect --format {{ .HostConfig.NetworkSettings.Ports }} gst1
+  220  docker inspect --format={{ .NetworkSettings.Ports }} gst1
+  221  docker inspect --format="{{ .NetworkSettings.Ports }}" gst1
+  222  su -
+  223  docker images
+  224  docker tag e5b a0z9/gstarted:1.0
+  225  docker images
+  226  docker login
+  227  docker push a0z9/gstarted:1.0
+  228  docker p
+  229  docker ps
+  230  docker update gst1 --restart always 
+  231  docker update bbox2 --restart unless-stopped 
+  232  docker ps
+  233  sudo service docker restart
+  234  docker ps
+  235  docker stop 5 d
+  236  docker stop 55
+  237  docker stop d
+  238  docker ps
+  239  docker update --restart 
+  240  sudo service docker restart
+  241  docker ps -a
+  242  docker inspect bbox1 | less
+  243  docker inspect gst1 | less
+  244  docker inspect gst1 --format "{{ .HostConfig.RestartPolicy.Name }}"
+  245  docker inspect gst1 | grep always
+  246  docker pause gst1 
+  247  docker ps -a
+  248  docker unpause gst1 
+  249  docker ps -a
+  250  docker save bboxmy:2.0 -o tars/bbox2_save.tar
+  251  mc
+  252  cd tars/
+  253  ls -la
+  254  cat 7707b4090767eb588ac412c3c2cae1bb98e14d09b6141c916eb77e901949acbf.json | jq
+  255  ls
+  256  vim Dockerfile
+  257  ./hi2
+  258  docker build -t hi:2.1 .
+  259  docker run --rm -i hi:2.1 ./hi2
+  260  docker create -d --name gst2 -p 8081:80 --restart always  docker/getting-started 
+  261  docker create --name gst2 -p 8081:80 --restart always  docker/getting-started 
+  262  docker ps -a
+  263  docker start gst2
+  264  docker ps -a
+  265  sudo service docker restart
+  266  docker ps -a
+  267  cd ..
+  268  history > history/history_day2_1
+  269  git add .
+  270  git commit -m 'images, tars, save, export'
+  271  git push
+  272  cd tars/
+  273  ls -la
+  274  docker images
+  275  sha256sum 7707b4090767eb588ac412c3c2cae1bb98e14d09b6141c916eb77e901949acbf.json 
+  276  docker images
+  277  cat 7707b4090767eb588ac412c3c2cae1bb98e14d09b6141c916eb77e901949acbf.json | jq
+  278  docker stats
+  279  docker update gst2 -m 25m
+  280  docker update gst2 --memory-swap=off -m 25m
+  281  docker update gst2 --memory-swap=false -m 25m
+  282  docker update gst2 --memory-swap 1m -m 20m
+  283  docker update gst2 --memory-swap 30m -m 20m
+  284  docker stats
+  285  docker update gst2 --cpus 0.5
+  286  docker stats
+  287  docker inspect gst2
+  288  docker update gst2 --cpus 0.5 --MemorySwappiness true
+  289  docker run -d -p 8083:80 --name gst3 --cpus 0.5 --MemorySwappiness=true docker/getting-started
+  290  docker run -d -p 8083:80 --name gst3 --cpus 0.5 --memory-swappiness=true  docker/getting-started
+  291  docker run -d -p 8083:80 --name gst3 --cpus 0.5 --memory-swappiness  docker/getting-started
+  292  docker run -d -p 8083:80 --name gst3 --cpus 0.5 --memory-swappiness 1  docker/getting-started
+  293  docker update gst3 -m 40123123
+  294  docker update gst3 -m 40123123 --memory-swap 40222222
+  295  docker stats
+  296  docker ps
+  297  docker update gst1 -m 20m
+  298  docker update gst1 -m 20m --memory-swap -1
+  299  docker stats
+  300  dd
+  301  docker stats
+  302  docker update bbox3 --cpus 1.2
+  303  docker stats
+  304  docker update bbox3 --cpus 0.3
+  305  docker stats
+  306  git
+  307  git clone https://github.com/a0z9/docker
+  308  cd docker/
+  309  ls -la
+  310  git pull
+  311  cd ..
+  312  mkdir docker-my
+  313  cd docker
+  314  git branch 
+  315  cd ..
+  316  mc
+  317  nano
+  318  vim .bashrc 
+  319  sudo apt update
+  320  ./docker/scripts/install-docker
+  321  docker ps
+  322  sudo usermod -aG docker student
+  323  newgrp docker
+  324  id
+  325  sudo ls -la /var/run/docker.sock
+  326  reboot
+  327  docker images
+  328  docker ps -a
+  329  docker start bbox3 
+  330  docker stats
+  331  wget http://http://192.168.56.11:8090
+  332  wget 192.168.56.11:8090
+  333  ls index.html 
+  334  cat index.html 
+  335  su -
+  336  docker volume ls
+  337  docker volume prune 
+  338  docker volume prune -f
+  339  docker volume ls
+  340  docker volume prune -f
+  341  docker volume ls
+  342  docker volume prune -f
+  343  docker volume create bbox-vol
+  344  docker volume ls
+  345  docker volume inspect bbox-vol 
+  346  su -
+  347  docker network ls
+  348  ip a
+  349  ls /home/student/docker/certs
+  350  sudo ls /etc/docker/certs.d/dock01\:5001
+  351  su -
+  352  scp docker/certs/my.crt dock02:/home/student/docker/ca.crt
+  353  sudo mkdir -p /etc/docker/certs.d/dock01:5002
+  354  sudo cp docker/certs/my.crt /etc/docker/certs.d/dock01\:5002/ca.crt
+  355  sudo apt install apache2-utils
+  356  cd docker
+  357  mkdir auth
+  358  htpasswd -Bbn student pass >> auth/htpasswd
+  359  htpasswd -Bbn andrei pass >> auth/htpasswd
+  360  cat auth/htpasswd 
+  361  cd scripts/registry/
+  362  ls
+  363  vim reg2auth.sh 
+  364  ./reg2auth.sh 
+  365  docker ps
+  366  docker tag dock01:5000/wapp:0.5 dock01:5002/wapp:0.5
+  367  docker images
+  368  docker push dock01:5002/wapp:0.5 
+  369  docker login dock01:5002
+  370  docker push dock01:5002/wapp:0.5 
+  371  cd ~/docker
+  372  sudo apt install docker-compose-plugin
+  373  docker ps
+  374  docker update bbox3 --cpus 0.5 
+  375  docker stop bbox3
+  376  docker ps
+  377  cd docker
+  378  cd scripts/
+  379  ls
+  380  node
+  381  less wapp.js 
+  382  sudo apt install nodejs
+  383  sudo apt update
+  384  sudo apt install nodejs
+  385  export DOCK_HOST=$(uname -n)
+  386  echo $DOCK_HOST 
+  387  node wapp.js 
+  388  vim wapp.js 
+  389  cd ..
+  390  mkdir app2
+  391  cp scripts/wapp.js app2/
+  392  cd app2
+  393  ls -la
+  394  vim dockerfile
+  395  cat dockerfile 
+  396  ls
+  397  docker build -t wapp:1.0 .
+  398  docker 
+  399  docker build -t wapp:1.0 .
+  400  docker rm -f wapp1 
+  401  docker run --name wapp1 -p 8090:8080 -d -e DOCK_HOST=$(uname -n)  wapp:1.0 
+  402  docker logs wapp1 
+  403  cp dockerfile dockerfile2 
+  404  vim dockerfile2
+  405  docker build -f dockerfile2 -t wapp:2.0 .
+  406  docker images
+  407  docker run --name wapp2 -p 8091:8080 -d -e DOCK_HOST=$(uname -n)  wapp:2.0 
+  408  docker exec --interactive wapp1 env
+  409  docker exec --interactive wapp2 env
+  410  docker exec --interactive wapp2 ls /
+  411  docker exec --interactive wapp1 ls /
+  412  docker exec --interactive wapp1 du /
+  413  docker exec --interactive wapp1 du -h /
+  414  docker exec --interactive wapp2 du -h /
+  415  docker ps
+  416  docker images
+  417  cat ../app1/dockerfile 
+  418  docker image
+  419  docker images
+  420  docker run --name bbox-vol-test -dit a0z9/bboxmy:2.0 
+  421  docker inspect bbox-vol-test 
+  422  docker exec bbox-vol-test ls /app2
+  423  docker exec bbox-vol-test cat /app2/file1
+  424  docker rm -f bbox-vol-test 
+  425  docker run --name bbox-vol-test -v /app2  -dit a0z9/bboxmy:2.0 
+  426  docker volume ls
+  427  docker inspect bbox-vol-test 
+  428  docker exec bbox-vol-test echo test > /app2
+  429  docker exec bbox-vol-test sh -c 'echo test > /app2/f1'
+  430  docker exec bbox-vol-test sh -c 'echo `date` > /app2/f2'
+  431  docker volume ls
+  432  docker volume inspect 4b082c71f892cdb211511af8a5bc9d0f00c66fa4b335f21ae34366e87457f43f 
+  433  docker rm -f bbox-vol-test 
+  434  docker volume inspect 4b082c71f892cdb211511af8a5bc9d0f00c66fa4b335f21ae34366e87457f43f 
+  435  docker run --name bbox-vol-test -v /app2  -dit a0z9/bboxmy:2.0 
+  436  docker run --name bbox-vol-test2 -v /app2  -dit a0z9/bboxmy:2.0 
+  437  docker ps
+  438  docker exec bbox-vol-test sh -c 'echo test > /app2/f21'
+  439  docker exec bbox-vol-test ls /app2
+  440  docker exec bbox-vol-test2 ls /app2
+  441  cd ../app1
+  442  cp dockerfile dockerfile-vol
+  443  vim dockerfile-vol 
+  444  docker images
+  445  docker build -t bbox:volume -f dockerfile-vol .
+  446  docker images
+  447  docker run --name bbox-vol-test3 -dit bbox:volume 
+  448  docker rm -f bbox-vol-test
+  449  docker rm -f bbox-vol-test2
+  450  docker rm -f bbox-vol-test3
+  451  docker ps
+  452  docker ps -a
+  453  docker rm -f bbox1 bbox2
+  454  docker rm -f bbox1 bbox3
+  455  docker ps -a
+  456  docker run --rm  -dit bbox:volume ls /app2
+  457  docker run --rm  -it bbox:volume ls /app2
+  458  docker run  -dit bbox:volume
+  459  docker rm -f f6 a5 09
+  460  docker run --name bbox1 -v bbox-vol:/app2 -dit busybox
+  461  docker run --name bbox2 -v bbox-vol:/app2 -dit busybox
+  462  docker exec bbox1 ls /app2
+  463  docker exec bbox2 ls /app2
+  464  docker attach bbox2 
+  465  docker exec bbox2 ls /app2
+  466  docker exec bbox1 ls /app2
+  467  docker attach bbox1 
+  468  docker exec bbox1 ls /app2
+  469  docker exec bbox2 ls /app2
+  470  docker run --name bbox3 -v bbox-vol:/app2:ro -dit busybox
+  471  docker exec bbox3 ls /app2
+  472  docker attach  bbox3
+  473  mdir shared
+  474  mkdir shared
+  475  echo 'DATA=1.234' >> shared/service.conf
+  476  echo 'VERSION=0.2' >> shared/service.conf
+  477  cat shared/service.conf 
+  478  docker run --name bbox4 -v /home/student/docker/app1/shared/:/conf -dit busybox
+  479  docker exec bbox4 ls /conf
+  480  docker exec bbox4 cat /conf/service.conf
+  481  docker exec bbox4 sh -c 'echo "DIR=/conf" >> /conf/service.conf'
+  482  cat shared/service.conf 
+  483  docker run --name bbox5 -v /home/student/docker/app1/shared/:/conf:ro -dit busybox
+  484  docker exec bbox5 sh -c 'echo "DIR2=/conf" >> /conf/service.conf'
+  485  docker exec bbox4 sh -c 'echo "DIR2=/conf" >> /conf/service.conf'
+  486  cat shared/service.conf 
+  487  cd ..
+  488  history > history/history_day3_full
+  489  git add .
+  490  git commit -m 'end of day3'
+  491  git push
+  492  docker volume ls
+  493  ip a
+  494  docker ps
+  495  docker exec -i wapp2 ip a
+  496  docker exec -i wapp1 ip a
+  497  docker stop $(docker ps -q)
+  498  ip a
+  499  docker start wapp1 wapp2 
+  500  docker start gst1 gst2 gst3
+  501  docker start bbox1 bbox2 bbox5
+  502  docker exec bbox1 ip a
+  503  docker exec bbox5 ip a
+  504  docker exec bbox5 ping 172.17.0.7
+  505  docker attach bbox1
+  506  docker network ls
+  507  docker network inspect bridge
+  508  docker run -d --name wapp3 a0z9/dock.wapp.0.5
+  509  docker run -d --name wapp3 a0z9/dock:wapp.0.5
+  510  docker ps
+  511  docker inspect wapp3
+  512  docker exec bbox5 ping wapp3
+  513  docker exec bbox5 env
+  514  docker rm -f bbox5
+  515  docker run --name bbox5 -dit --link wapp3:webservice busybox
+  516  docker exec bbox5 ip a
+  517  docker exec bbox5 cat /etc/hosts
+  518  docker exec bbox5 env
+  519  docker attach bbox5
+  520  docker run --name bbox3 -dit --link wapp1:webservice busybox
+  521  docker run --name bbox6 -dit --link wapp1:webservice busybox
+  522  docker attach bbox6
+  523  docker network create --driver bridge net2
+  524  docker inspect net2
+  525  docker network ls
+  526  docker ps
+  527  docker stop $(docker ps -q)
+  528  ip a
+  529  docker start wapp1
+  530  ip a
+  531  docker exec wapp1 ip a
+  532  docker network disconnect bridge wapp1
+  533  ip a
+  534  docker exec wapp1 ip a
+  535  docker network connect net2 wapp1
+  536  docker exec wapp1 ip a
+  537  docker exec wapp1 ipng 172.18.0.1
+  538  docker exec wapp1 ping 172.18.0.1
+  539  docker exec wapp1 ping 172.17.0.1
+  540  docker attach -i wapp1 
+  541  docker exec wapp1 cat /etc/hosts
+  542  docker exec wapp1 ip a
+  543  docker restart wapp1
+  544  docker exec wapp1 cat /etc/hosts
+  545  docker exec wapp1 cat /etc/resolv.conf
+  546  docker run --name bbox-net2 --network net2 -dit busybox
+  547  docker network inspect net2 
+  548  docker exec wapp1 ping bbox-net2
+  549  docker exec bbox-net2 ping wapp1
+  550  docker exec bbox-net2 cat /etc/hosts
+  551  docker exec bbox-net2 ping bbox-net2 
+  552  docker run --name bbox-net2-1 --hostname bb2  --network net2 -dit busybox
+  553  docker exec bbox-net2-1 ping bbox-net2 
+  554  docker exec bbox-net2-1 cat /etc/hosts
+  555  docker run --name bbox-net2-2 --hostname bb2 --hostname bb2-1  --network net2 -dit busybox
+  556  docker exec bbox-net2-2 cat /etc/hosts
+  557  docker exec bbox-net2-2 ping bb2-1
+  558  docker exec bbox-net2-2 ping bb2
+  559  docker restart bbox-net2-2
+  560  docker exec wapp1 ping bb2
+  561  docker exec wapp1 ping bb2-1
+  562  docker exec bbox-net2-2 ip a
+  563  docker ps
+  564  docker network inspect net2
+  565  docker network create net3 --subnet 192.168.201.0/24 --gateway 192.168.201.254
+  566  docker network disconnect net2 $(docker ps -q)
+  567  for i in $(docker ps -q); do  docker network disconnect net2 i; done
+  568  for i in $(docker ps -q); do  docker network disconnect net2 $i; done
+  569  docker network inspect net2
+  570  docker restart $(docker ps -q)
+  571  for i in $(docker ps -q); do  docker network connect net3 $i; done
+  572  docker network inspect net3
+  573  docker inspect bbox-net2-1
+  574  docker inspect bbox-net2-1 | grep host
+  575  docker inspect bbox-net2-1 | grep alias
+  576  docker inspect bbox-net2-1 | grep ali
+  577  docker inspect bbox-net2-1
+  578  docker exec wapp1 bing  bbox-net2-1
+  579  docker exec wapp1 ping  bbox-net2-1
+  580  docker exec wapp1 ping bb2
+  581  docker network create net4 --subnet 192.168.211.0/24 --gateway 192.168.211.254 --ipv6 false
+  582  docker network create --subnet 192.168.211.0/24 --gateway 192.168.211.254 --ipv6 false net4
+  583  docker network create --subnet 192.168.211.0/24 --gateway 192.168.211.254 --ipv6=false net4
+  584  docker network inspect net4
+  585  docker search registry
+  586  docker run -d -p 5000:5000 --name registry registry:2
+  587  dock images
+  588  docker images
+  589  docker tag 755 dock01:5000/bbox:0.1
+  590  docker push dock01:5000/bbox:0.1 
+  591  curl dock01:5000/v2/_catalog
+  592  curl dock01:5000/v2/bbox/tags/list
+  593  docker rmi 7707
+  594  docker rmi 7707 -f
+  595  docker images
+  596  docker rmi 755 -f
+  597  docker images 
+  598  docker ps -a
+  599  for i in {1,6}; do docker rm -f bbox$i; done
+  600  for i in {1..6}; do docker rm -f bbox$i; done
+  601  docker ps -a
+  602  docker rm -f 92 41 d7
+  603  docker ps -a
+  604  docker rm -f 79 5e
+  605  docker ps -a
+  606  docker rm -f 30
+  607  docker ps -a
+  608  docker rm -f wapp2
+  609  docker ps -a
+  610  docker network ls
+  611  docker network prune -f
+  612  docker image ls
+  613  docker image prune -f
+  614  docker image ls
+  615  docker image prune 
+  616  docker image ls
+  617  docker ps -a
+  618  docker ps
+  619  docker run --name bbox1 -dit dock01:5000/bbox:0.1
+  620  docker image ls
+  621  curl dock01:5000/v2/bbox/tags/list
+  622  curl dock01:5000/v2/_catalog
+  623  docker tag a0z9/dock:wapp.0.5 dock01:5000/wapp:0.5
+  624  docker push dock01:5000/wapp:0.5 
+  625  curl dock01:5000/v2/_catalog
+  626  docker images
+  627  docker rmi f4a -f
+  628  docker images
+  629  docker run -d --name wapp2 -p 8081:8080 dock01:5000/wapp:0.5
+  630  docker run -d --name wapp21 -p 8082:8080 dock01:5000/wapp
+  631  sudo nano /etc/hosts
+  632  sudo cat /etc/hosts
+  633  history > history/history_day4_1
+  634  git add .
+  635  git commit -m 'day4 - nets -reistry'
+  636  git commit -m 'day4 - nets -registry'
+  637  git push
+  638  cat /etc/hosts
+  639  docker images
+  640  curl dock01:5000/v2/_catalog
+  641  curl dock01:5000/v2/wapp/tags/list
+  642  mkdir certs
+  643  ls -la
+  644  ls -la certs/
+  645  openssl req -newkey rsa:4096 -nodes -sha256 -keyout certs/my.key -x509 -days 3650 -out certs/my.crt -addext 'subjectAltName=DNS:dock01'
+  646  ls -la certs/
+  647  sudo mkdir -p /etc/docker/certs.d/dock01:5001
+  648  sudo cp certs/my.crt /etc/docker/certs.d/dock01\:5001/ca.crt
+  649  docker ps
+  650  docker run --name registry5001 -d -p 5001:5000 -v /home/student/docker/certs:/certs -e REGISTRY_HTTP_TLS_CERTIFICATE=/certs/my.crt -e REGISTRY_HTTP_TLS_KEY=/certs/my.key --restart=always registry:2
+  651  docker ps
+  652  docker tag dock01:5000/wapp:0.5 dock:5001/wapp:0.5
+  653  docker tag dock01:5000/wapp:0.5 dock01:5001/wapp:0.5
+  654  docker push dock01:5001/wapp:0.5 
+  655  curl --cacert certs/my.crt dock01:5001/v2/_catalog
+  656  curl --cacert certs/my.crt https://dock01:5001/v2/_catalog
+  657  curl  https://dock01:5001/v2/_catalog
+  658  cd docker
+  659  vim scripts/install-docker-compose 
+  660  cp scripts/install-docker-compose scripts/install-docker-compose-2.14.1 
+  661  vim scripts/install-docker-compose-2.14.1 
+  662  docker-compose
+  663  ./scripts/install-docker-compose-2.14.1 
+  664  docker-compose version
+  665  docker-compose --version
+  666  docker-compose -v
+  667  docker-compose --help
+  668  docker-compose
+  669  env | sort
+  670  env
+  671  env | sort
+  672  export HOSTNAME=$(uname -n)
+  673  env | sort
+  674  docker ps
+  675  docker rm -f app-compose-wapp1-1 
+  676  docker ps
+  677  docker service ps wapp 
+  678  docker node ls
+  679  docker service ps wapp 
+  680  docker node ls
+  681  docker service ps wapp 
+  682  docker compose version 
+  683  docker-compose version
+  684  docker compose version
+  685  cd docker
+  686  ls -la
+  687  git pull
+  688  mkdir app3
+  689  cd app3
+  690  touch docker-compose.yaml
+  691  vim docker-compose.yaml 
+  692  sudo apt install yamllint
+  693  yamllint docker-compose.yaml 
+  694  cat docker-compose.yaml 
+  695  docker compose up -d
+  696  docker compose down
+  697  vim docker-compose.yaml 
+  698  docker compose up -d
+  699  docker compose ls
+  700  docker compose ps
+  701  docker ps
+  702  docker compose down
+  703  cp docker-compose.yaml docker-compose-2.yaml 
+  704  HOSTNAME=$(uname -n) docker compose up -d
+  705  docker compose ps
+  706  docker exec app3-gst0-1 env
+  707  docker compose top
+  708  docker compose stop gst1
+  709  docker compose start gst1
+  710  docker exec app3-gst1-1 env
+  711  export HOSTNAME=$(uname -n)
+  712  docker compose stop gst1
+  713  docker compose start gst1
+  714  docker compose restart
+  715  cd ..
+  716  docker compose down
+  717  docker compose --file app3/docker-compose.yaml down
+  718  docker compose --file app3/docker-compose.yaml up -d
+  719  cd app3
+  720  docker compose down
+  721  docker volume prune -f
+  722  cd ../app-compose/
+  723  vim wapp/wapp.js 
+  724  cat wapp/dockerfile 
+  725  docker ps
+  726  vim docker-compose.yaml 
+  727  docker compose up -d
+  728  docker compose ps
+  729  docker compose down
+  730  vim docker-compose.yaml 
+  731  docker compose up -d
+  732  vim wapp/wapp.js 
+  733  docker compose build 
+  734  docker compose 
+  735  vim wapp/wapp.js 
+  736  docker compose down
+  737  docker compose up -d
+  738  docker stats
+  739  vim docker-compose.yaml 
+  740  docker compose down
+  741  docker compose up -d
+  742  vim docker-compose.yaml 
+  743  docker exec app-compose-wapp1-1 ls /var/log/wapp
+  744  docker exec app-compose-wapp1-1 cat /var/log/wapp/wapp.log
+  745  cd ../app-library/
+  746  ls -la
+  747  mc
+  748  docker ps
+  749  docker stop wapp1
+  750  docker ps
+  751  docker compose up -d
+  752  docker compose ls
+  753  docker compose ps
+  754  docker compose logs web
+  755  docker compose down
+  756  docker compose up -d
+  757  mc
+  758  docker volume create portainer_data
+  759  docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
+  760  cd ..
+  761  docker pull
+  762  git pull
+  763  history > history/history_day5_1
+  764  history > history/history_day5_dock01_1
+  765  git add .
+  766  git commit -m 'day5 compose'
+  767  git push
+  768  ls -la
+  769  cd app-compose/
+  770  ls -la
+  771  vim wapp/wapp.js 
+  772  vim docker-compose-wapp.yaml 
+  773  docker compose -f docker-compose-wapp.yaml up -d
+  774  vim docker-compose-wapp.yaml 
+  775  docker compose -f docker-compose-wapp.yaml down
+  776  docker compose -f docker-compose-wapp.yaml up -d
+  777  docker compose -f docker-compose-wapp.yaml ps
+  778  vim docker-compose-wapp.yaml 
+  779  docker compose -f docker-compose-wapp.yaml 
+  780  docker compose -f docker-compose-wapp.yaml up -d
+  781  cd ..
+  782  history > history/hist_day6
+  783  git add .
+  784  git commit -am 'health check wapp service'
+  785  git push
+  786  cd app-library/
+  787  cp docker-compose.yaml docker-compose-old.yaml
+  788  vim docker-compose
+  789  vim docker-compose.yaml
+  790  docker compose down
+  791  docker images
+  792  docker compose up -d
+  793  docker compose down
+  794  vim docker-compose.yaml
+  795  docker compose up -d
+  796  docker rm -f portainer 
+  797  docker volume prune -f
+  798  docker swarm init
+  799  docker node ls
+  800  docker network ls
+  801  docker service create --name wapp -p 8095:8080 --replicas 2  wapp:2
+  802  docker service rm s47
+  803  docker service create --name wapp -p 8095:8080 --replicas 2  a0z9/dock:wapp.0.5
+  804  docker service ls
+  805  docker service ps wapp
+  806  docker service update wapp --replicas 5
+  807  docker service ps wapp
+  808  docker service rm wapp 
+  809  docker service 
+  810  docker service create --name wapp -p 8095:8080 --replicas 5  a0z9/dock:wapp.0.5
+  811  cd ..
+  812  ls
+  813  mkdir app4-swarm
+  814  cd app4-swarm/
+  815  curl -L https://downloads.portainer.io/ce2-16/portainer-agent-stack.yml -o portainer-agent-stack.yml
+  816  vim portainer-agent-stack.yml 
+  817  docker stack deploy -c portainer-agent-stack.yml portainer
+  818  vim portainer-agent-stack.yml 
+  819  docker ps -a
+  820  docker rm 9d 11 7c 829
+  821  docker ps -a
+  822  docker restart portainer_portainer.1.o3nwqafmux0u49nzpp2dg5rov 
+  823  docker ps -a
+  824  docker rm 9e
+  825  docker ps -a
+  826  vim docker-compose.yaml
+  827  cp ../app-compose/docker-compose-wapp.yaml docker-compose.yaml
+  828  vim docker-compose.yaml
+  829  cd ..
+  830  history > history/hist_day6_2
+  831  git add .
+  832  git commit -am 'stack deploy manifest'
+  833  git push 
+  834  cd app4-swarm/
+  835  ls -la
+  836  less docker-compose.yaml 
+  837  docker stack deploy -c docker-compose.yaml mystack
+  838  vim docker-compose.yaml
+  839  docker stack deploy -c docker-compose.yaml mystack
+  840  vim docker-compose.yaml
+  841  docker stack deploy -c docker-compose.yaml mystack
+  842  vim docker-compose.yaml
+  843  docker stack deploy -c docker-compose.yaml mystack
+  844  docker stack ls
+  845  docker stack ps mystack 
+  846  docker stack services mystack 
+  847  docker node ls
+  848  docker node promote dock02
+  849  docker node ls
+  850  docker node update dock03 --availability drain
+  851  docker node update dock03 --availability active 
+  852  docker network create --driver overlay --attachable --subnet 192.168.111.0/24 bboxnet
+  853  docker network ls
+  854  docker run --name bbox01 -dit --network bboxnet busybox
+  855  docker ps
+  856  docker node demote dock02
+  857  docker node demote dock03
+  858  docker node rm dock03
+  859  docker node rm dock03 --force
+  860  docker node rm dock02 --force
+  861  docker node ps
+  862  docker swarm leave
+  863  docker swarm leave --leave
+  864  docker swarm leave --force
+  865  cd ..
+  866  git pull 
+  867  history > history/history_day6_2
+  868  git add .
+  869  git commit -am 'day of 6, dock01'
+  870  git push
+  871  cd ..
+  872  git clone https://github.com/a0z9/k8s
+  873  cd k8s/
+  874  ./install_k8s_flannel.sh 
+  875  sudo service kubelet status
+  876  k get pods -o wide 
+  877  k get pods -o wide --namespace kubernetes-dashboard 
+  878  k create token --namespace kubernetes-dashboard admin-user --duration 24h
+  879  k top node dock01
+  880  ls -la
+  881  vim metrics-server.yaml 
+  882  k apply -f metrics-server.yaml 
+  883  k top node dock01
+  884  k top node dock02
+  885  k create ns student
+  886  k run wapp --image a0z9/dock:wapp.0.5 --port 8080 --namespace student
+  887  k get pods --namespace student 
+  888  k get pods --namespace student -o wide
+  889  k logs pods/wapp --namespace student
+  890  k get pods
+  891  k get pods --namespace student 
+  892  k get nodes
+  893  k get pods --namespace student 
+  894  k get nodes
+  895  k get pods --namespace student 
+  896  k get nodes
+  897  k get pods --namespace student 
+  898  k get pods --namespace student -o wide
+  899  k get nodes
+  900  k get pods --namespace student -o wide
+  901  k create deployment wapp-depl --image a0z9/dock:wapp.0.5 --port 8080 --namespace student --replicas 2
+  902  k delete deployments.apps wapp-depl --namespace default 
+  903  k delete wapp-depl --namespace default 
+  904  k get deployments.apps --namespace student wapp-depl 
+  905  k get deployments.apps --namespace student wapp-depl -o wide
+  906  k get deployments.apps --namespace student wapp-depl -oyaml
+  907  k get pods --namespace student -o wide
+  908  k expose deployment --namespace student wapp-depl --port 8095
+  909  k get svc
+  910  k get svc --all-namespaces 
+  911  k expose deployment --namespace student wapp-depl --port 8095 --target-port 8080
+  912  k get svc --all-namespaces 
+  913  k cluster-info 
+  914  k cluster-info dump
+  915  mkdir history 
+  916  history > history/history_day6_dock01
+  917  git add .
+  918  git commit -m 'end of day 7'
+  919  mv history/history_day6_dock01 history/history_day7_dock01 
+  920  git add .
+  921  git status
+  922  git commit -m 'end of day 7'
+  923  git push
+  924  k api-resources 
+  925  k explain pods
+  926  k explain pods.metadata
+  927  k explain pods.spec
+  928  k explain pods.spec.containers
+  929  vim pod-student-bbox.yaml
+  930  k apply -f pod-student-bbox.yaml 
+  931  vim pod-student-bbox.yaml
+  932  k apply -f pod-student-bbox.yaml 
+  933  k logs --namespace student pods/students-pod 
+  934  k get pods --namespace student 
+  935  k logs --namespace student pods/students-pod 
+  936  k get pods --namespace student 
+  937  vim pod-student-bbox.yaml
+  938  k delete -f pod-student-bbox.yaml 
+  939  k apply -f pod-student-bbox.yaml 
+  940  k get pods --namespace student 
+  941  k logs --namespace student pods/students-pod 
+  942  k get pods --namespace student 
+  943  k logs --namespace student pods/students-pod 
+  944  k explain pods/spec/containers
+  945  k explain pods.spec.containers
+  946  k explain pods
+  947  k explain pods.spec
+  948  vim pod-student-bbox.yaml
+  949  k delete --namespace student pods/students-pod 
+  950  k apply -f pod-student-bbox.yaml 
+  951  k logs --namespace student pods/students-pod
+  952  k get pods --namespace student 
+  953  cp pod-student-bbox-2-containers.yaml
+  954  cp pod-student-bbox.yaml pod-student-bbox2.yaml 
+  955  vim pod-student-bbox2.yaml
+  956  k apply -f pod-student-bbox2.yaml 
+  957  k get pods --namespace student 
+  958  k get pods --namespace student -o wide
+  959  docker ps
+  960  docker login dock01:5002
+  961  cat /home/student/.docker/config.json
+  962  docker logout
+  963  cat /home/student/.docker/config.json
+  964  k create secret generic dock5002 --from-file /home/student/.docker/config.json --type kubernetes.io/dockerconfigjson
+  965  k create secret generic dock5002 --from-file=/home/student/.docker/config.json --type=kubernetes.io/dockerconfigjson
+  966  k create secret generic dock5002 --from-file=.dockerconfigjson=/home/student/.docker/config.json --type=kubernetes.io/dockerconfigjson
+  967  k delete secrets dock5002 
+  968  k create secret generic dock5002 --from-file=.dockerconfigjson=/home/student/.docker/config.json --type=kubernetes.io/dockerconfigjson --namespace student
+  969  k 
+  970  k get nodes 
+  971  kubeadm --help
+  972  kubeadm tocken --help
+  973  kubeadm tocken 
+  974  kubeadm token create --print-join-command
+  975  k get nodes 
+  976  sudo crictl ps
+  977  k get ns
+  978  k get services --all-namespaces 
+  979  k get pods --all-namespaces 
+  980  k get pods --all-namespaces -o wide
+  981  k get deployments.apps --all-namespaces -o wide
+  982  vim install_kube_dashboard.sh 
+  983  ./install_kube_dashboard.sh 
+  984  k create token --namespace kubernetes-dashboard admin-user --duration 100h
+  985  cat ../.kube/config 
+  986  vim stada-ns.yaml
+  987  k apply -f stada-ns.yaml 
+  988  k delete -f stada-ns.yaml 
+  989  k apply -f stada-ns.yaml 
+  990  cp pod-student-bbox.yaml pod-student-bbox-private.yaml
+  991  vim  pod-student-bbox-private.yaml
+  992  k apply -f pod-student-bbox-private.yaml
+  993  sudo cp ../docker/certs/my.crt /usr/local/share/ca-certificates/
+  994  sudo update-ca-certificates 
+  995  sudo service kubelet restart
+  996  k delete --namespace student pods/students-pod-private 
+  997  vim  pod-student-bbox-private.yaml
+  998  k apply -f pod-student-bbox-private.yaml
+  999  k delete --namespace student pods/students-pod-private 
+ 1000  k apply -f pod-student-bbox-private.yaml
+ 1001  git status
+ 1002  history > history/history_day8_dock01
+ 1003  git add .
+ 1004  git commit -m 'end of day8. pods, depls,ns'
+ 1005  git push
+ 1006  k get po
+ 1007  k get po --all-namespaces 
+ 1008  k get po --namespace student 
+ 1009  k config set-context --current --namespace student
+ 1010  k get po
+ 1011  k get po -o wide 
+ 1012  ls -la
+ 1013  git pull
+ 1014  vim pod-student-bbox2.yaml 
+ 1015  k config set-context --current --namespace student
+ 1016  k apply -f  pod-student-bbox2.yaml 
+ 1017  k get po -o wide
+ 1018  k delete pods/students-pod-dock03 
+ 1019  vim pod-student-bbox2.yaml 
+ 1020  k apply -f  pod-student-bbox2.yaml 
+ 1021  k get po -o wide
+ 1022  vim pod-student-bbox2.yaml 
+ 1023  k apply -f  pod-student-bbox2.yaml 
+ 1024  k delete pods/students-pod-dock02 
+ 1025  k apply -f  pod-student-bbox2.yaml 
+ 1026  k get po -o wide
+ 1027  k create service clusterip mysvc
+ 1028  k create service clusterip mysvc --tcp '8070:8080'
+ 1029  k get svc
+ 1030  k get svc -o wide
+ 1031* k config 
+ 1032  k get svc -oyaml
+ 1033  ls -la
+ 1034  vim wapp0.1-svc.yaml 
+ 1035  vim wapp0.1-svc-selector.yaml 
+ 1036  k apply -f wapp0.1-svc-selector.yaml 
+ 1037  history > history/history_day9_dock01
+ 1038  git add .
+ 1039  git commit -m 'services, ports, access'
+ 1040  git push
+ 1041  git pull
+ 1042  ls -la
+ 1043  ls -la -t
+ 1044  cat stada-depl.yaml 
+ 1045  ls -la -t
+ 1046  ls -la -tr
+ 1047  cp wapp0.1-svc-selector.yaml stada-svc.yaml
+ 1048  vim stada-svc.yaml 
+ 1049  k get deployments.apps --all-namespaces 
+ 1050  k get svc --all-namespaces 
+ 1051  k apply -f stada-svc.yaml 
+ 1052  k get svc --all-namespaces 
+ 1053  k create token --namespace kubernetes-dashboard admin-user --duration 4h
+ 1054  k get svc  -o all
+ 1055  k get svc  -o wide
+ 1056  cat job-busy1.yaml 
+ 1057* 
+ 1058  vim job-busy1.yaml 
+ 1059  k get jobs.batch 
+ 1060  k apply -f job-busy1.yaml 
+ 1061  k get jobs.batch 
+ 1062  k get jobs.batch -o wide
+ 1063  k logs jobs/greets2 
+ 1064  k get jobs.batch -o wide
+ 1065  k get jobs/greets2 -o json
+ 1066  k delete jobs/greets2
+ 1067  k apply -f job-busy1.yaml 
+ 1068  k get jobs.batch -o wide
+ 1069  vim job-busy1-error.yaml 
+ 1070  k apply -f job-busy1-error.yaml 
+ 1071  vim job-busy1-error.yaml 
+ 1072  k apply -f job-busy1-error.yaml 
+ 1073  k get jobs.batch -o wide
+ 1074  k get jobs/greets2-err  -o wide
+ 1075  k get jobs/greets2-err  -o yaml
+ 1076  vim job-busy1-cron.yaml 
+ 1077  k apply -f job-busy1-cron.yaml 
+ 1078  vim job-busy1-cron.yaml 
+ 1079  k apply -f job-busy1-cron.yaml 
+ 1080  k get cronjobs.batch 
+ 1081  k get cronjobs.batch -o wide
+ 1082  k delete cronjobs/greets-cron 
+ 1083  vim job-busy1-cron.yaml 
+ 1084  k apply -f job-busy1-cron.yaml 
+ 1085  k get cronjobs.batch -o wide
+ 1086  k get cronjobs.batch -o yaml
+ 1087  k api-resources 
+ 1088  k api-resources | wc -l
+ 1089  k get serviceaccounts 
+ 1090  k create serviceaccount readers
+ 1091  k get serviceaccounts 
+ 1092  k get serviceaccounts -o wide
+ 1093  k get serviceaccounts readers -o wide 
+ 1094  k get serviceaccounts readers
+ 1095  k describe serviceaccounts readers
+ 1096  k describe serviceaccounts readers -o yaml
+ 1097  k get serviceaccounts readers -o yaml
+ 1098  k create token readers --duration 2h
+ 1099  cp role.yml role-all-readers.yaml
+ 1100  cat role-all-readers.yaml 
+ 1101  vim role.yaml 
+ 1102  vim role.yml 
+ 1103  cat role.yml 
+ 1104  k apply -f role.yml 
+ 1105  k get clusterrole
+ 1106  k get clusterrole readers-limited1 
+ 1107  k get clusterrole readers-limited1 -oyaml
+ 1108  ls -la
+ 1109  cp role-binding.yml role-readers-bind.yaml
+ 1110  vim role-readers-bind.yaml 
+ 1111  k apply -f role-readers-bind.yaml 
+ 1112  vim role.yml 
+ 1113  k apply -f role.yml 
+ 1114  vim role.yml 
+ 1115  k apply -f role.yml 
+ 1116  ls -la
+ 1117  cat create_secret_for_token_sa.yml 
+ 1118  k apply -f create_secret_for_token_sa.yml 
+ 1119  k get secrets --namespace kubernetes-dashboard admin-user-secret 
+ 1120  k get secrets --namespace kubernetes-dashboard admin-user-secret -o yaml
+ 1121  echo eyJhbGciOiJSUzI1NiIsImtpZCI6ImZBTGRhdGoxVlB1TEFDVGdDdWttUDFCcjd2Y2MyLUVldmcyRjJyczQ0MFEifQ.eyJhdWQiOlsiaHR0cHM6Ly9rdWJlcm5ldGVzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWwiXSwiZXhwIjoxNjcxNzkxODYzLCJpYXQiOjE2NzE3ODQ2NjMsImlzcyI6Imh0dHBzOi8va3ViZXJuZXRlcy5kZWZhdWx0LnN2Yy5jbHVzdGVyLmxvY2FsIiwia3ViZXJuZXRlcy5pbyI6eyJuYW1lc3BhY2UiOiJzdHVkZW50Iiwic2VydmljZWFjY291bnQiOnsibmFtZSI6InJlYWRlcnMiLCJ1aWQiOiI3NzFiMTc4Yy03OWUzLTQwNGEtYjVhNy00MTYwOWFmMWNmYjEifX0sIm5iZiI6MTY3MTc4NDY2Mywic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OnN0dWRlbnQ6cmVhZGVycyJ9.PD4Lg4knlpVaP-wz_AdgEg3l879XeirUk-xaosj7kBdrqvxgf7Ogfb3NA6L_F6UwDtS2kzI-6gHdCrZqGcHEqilndaQbIcvoMwsGI4QbUxkodc_NqP7eQ2hxA4mIA7F8FMM9E202H5vRbpTvzT5XaAsCEJyYRVwH67YI7jM7yFtQUHbdq8qfjk1s4Bsd1FLiT7xPcJz3BuH9JBRNqemb0_cLj4N1HGJ9DY725HQ6DyMMx7ku53bJv9kGs8GQsKIfmbLwPhy4W-xKMO4omCZYaH7DB8d2vVqg8Q6mosBh3te8L59VUuelOt7i8bfsnGt3WJpH8JcMdaItW8a512lpAQ | base64 --decode 
+ 1122  echo ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNkltWkJUR1JoZEdveFZsQjFURUZEVkdkRGRXdHRVREZDY2pkMlkyTXlMVVZsZG1jeVJqSnljelEwTUZFaWZRLmV5SnBjM01pT2lKcmRXSmxjbTVsZEdWekwzTmxjblpwWTJWaFkyTnZkVzUwSWl3aWEzVmlaWEp1WlhSbGN5NXBieTl6WlhKMmFXTmxZV05qYjNWdWRDOXVZVzFsYzNCaFkyVWlPaUpyZFdKbGNtNWxkR1Z6TFdSaGMyaGliMkZ5WkNJc0ltdDFZbVZ5Ym1WMFpYTXVhVzh2YzJWeWRtbGpaV0ZqWTI5MWJuUXZjMlZqY21WMExtNWhiV1VpT2lKaFpHMXBiaTExYzJWeUxYTmxZM0psZENJc0ltdDFZbVZ5Ym1WMFpYTXVhVzh2YzJWeWRtbGpaV0ZqWTI5MWJuUXZjMlZ5ZG1salpTMWhZMk52ZFc1MExtNWhiV1VpT2lKaFpHMXBiaTExYzJWeUlpd2lhM1ZpWlhKdVpYUmxjeTVwYnk5elpYSjJhV05sWVdOamIzVnVkQzl6WlhKMmFXTmxMV0ZqWTI5MWJuUXVkV2xrSWpvaVltRXlZelEzWlRNdE5EUXpZaTAwWVRZM0xXSTVNR1F0TWpBeU16TTRZVGd3TWpneElpd2ljM1ZpSWpvaWMzbHpkR1Z0T25ObGNuWnBZMlZoWTJOdmRXNTBPbXQxWW1WeWJtVjBaWE10WkdGemFHSnZZWEprT21Ga2JXbHVMWFZ6WlhJaWZRLmJUc3NWc1JIZkk5emI0ZFdrX0prUHcwa2EyekQxTlB6cFdCalNoN0dHbzlYRDQ4dlZSVDlrNlZTVm96NjZJRzRmdWdSR0NIRE9pM0dLUGx6Qmo3aHFNczVQeDFVSjdyQ1V5dzUyWXc1QThHcTRxTmNJeTVTZjlhN2hsWmZGeUg4S2w5TjgzdlZMRTUtSjVzcXd0UXExZEEwV3lDVTc3cmtZVzBqVkR2cE4wVEpwbzNnZU1KTm01SVFaaEZmV0paVVhOb3Q0cXAwbnMxNnNJVUZabmJMSVRaUDYtbDRNaU5IY1VaQWtsNUc5eU9CWFpSVjVVQjJFbXN5eEhxdFFneGlwOC1nd0RrTEJFNjhiNjJ3QkVoVzcwZHM0RWVWb2xIR3BfbzhPTHJ6bm9DMVJOR2pLbUc4cmlvZjBGUjhfWUJwNUI5NlVRdlg4Zm16UTEzSThkeVJyZw== | base64 --decode 
+ 1123  k create serviceaccount super-reader
+ 1124  vim role-all-readers.yaml 
+ 1125  k apply -f role-all-readers.yaml 
+ 1126  vim role-binding.yml 
+ 1127  k apply -f role-binding.yml 
+ 1128  k create token super-reader --duration 1h
+ 1129  history > history/history_day10_dock01

@@ -2,6 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: greets2
+  namespace: student
 
 spec:
   backoffLimit: 3
@@ -18,6 +19,6 @@ spec:
              echo Hello, Andrei! Start job... 
              sleep 15 
              echo ..its done, by!
-             exit 1;
+             exit 0
 
       restartPolicy: Never    

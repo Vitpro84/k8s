@@ -2,6 +2,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: greets-cron
+  namespace: student
 
 spec:
   schedule: "*/2 * * * 1-5"
@@ -10,13 +11,13 @@ spec:
         spec:
           backoffLimit: 2
           activeDeadlineSeconds: 60
-          ttlSecondsAfterFinished: 15
+          ttlSecondsAfterFinished: 15 # Job del after 15s
           template:
             spec:
               containers:
                 - name: greets-cron
                   image: busybox
                   command: ["/bin/sh"]
-                  args: ["-c", "echo Hello, Andrei! Start job at `date` ... && sleep 15 && echo ..its done, by!"]      
+                  args: ["-c", "echo Hello, Andrei! Start job at `date` ... && sleep 11 && echo Job is fininished, by!"]      
 
               restartPolicy: Never    
