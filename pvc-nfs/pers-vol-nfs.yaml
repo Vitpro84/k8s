@@ -12,7 +12,7 @@ spec:
     Retain
   nfs:
     path: /home/nfsshared
-    server: 172.17.17.11
+    server: 192.168.56.11
     readOnly: false
 
 

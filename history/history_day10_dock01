@@ -1127,3 +1127,86 @@
  1127  k apply -f role-binding.yml 
  1128  k create token super-reader --duration 1h
  1129  history > history/history_day10_dock01
+ 1130  git add .
+ 1131  git commit -m 'jobs, cjobs, sa, rbac'
+ 1132  git push
+ 1133  ls
+ 1134  vim deploy-hpa-hiload.yaml 
+ 1135  k apply deploy-hpa-hiload.yaml 
+ 1136  k apply -h deploy-hpa-hiload.yaml 
+ 1137  k apply -f deploy-hpa-hiload.yaml 
+ 1138  k get deployments.apps bbox-hpa-deploy 
+ 1139  k get deployments.apps bbox-hpa-deploy -o wide
+ 1140  k stats deployments.apps bbox-hpa-deploy
+ 1141  k top deployments.apps bbox-hpa-deploy
+ 1142  k top pod 
+ 1143  k top pod -o wide
+ 1144  k top pod
+ 1145  k autoscale deployment bbox-hpa-deploy --min=1 --max=4 --cpu-percent=10
+ 1146  k get hpa/bbox-hpa-deploy 
+ 1147  k top node 
+ 1148  k top pod 
+ 1149  k get hpa/bbox-hpa-deploy 
+ 1150  k rollout restart deployment bbox-hpa-deploy 
+ 1151  k top pod 
+ 1152  k get hpa/bbox-hpa-deploy 
+ 1153  k top pod 
+ 1154  k get hpa/bbox-hpa-deploy 
+ 1155  k top pod 
+ 1156  k get hpa/bbox-hpa-deploy 
+ 1157  k top pod 
+ 1158  k get hpa/bbox-hpa-deploy 
+ 1159  k top pod 
+ 1160  k get po
+ 1161  k get po -o wide
+ 1162  k get hpa/bbox-hpa-deploy 
+ 1163  k get po -o wide
+ 1164  k get hpa/bbox-hpa-deploy 
+ 1165  k get po -o wide
+ 1166  cd pvc-hostpath/
+ 1167  ls -la
+ 1168  k apply -f storage-class-my.yaml 
+ 1169  k apply -f pers-vol-hostpath.yaml 
+ 1170  k apply -f pers-vol-claim-hostpath.yaml 
+ 1171  k apply -f depl-bbox-pvc-hostpath.yaml 
+ 1172  k get deployments.apps pvc1-depl 
+ 1173  k get deployments.apps pvc1-depl -o wide
+ 1174  k get po -o wide
+ 1175  k delete deployments/pvc1-depl
+ 1176  k get po -o wide
+ 1177  k apply -f depl-bbox-pvc-hostpath.yaml 
+ 1178  k get po -o wide
+ 1179  cd..
+ 1180  cd ..
+ 1181  cd pvc-nfs/
+ 1182  sudo apt install nfs-kernel-server -y
+ 1183  sudo mkdir /home/nfsshared
+ 1184  sudo chown nobody:nogroup /home/nfsshared/
+ 1185  sudo vim /etc/exports 
+ 1186  sudo systemctl restart nfs-kernel-server.service 
+ 1187  nfsstat 
+ 1188  ssh dock02
+ 1189  ssh dock03
+ 1190  vim pers-vol-nfs.yaml 
+ 1191  vim pers-vol-claim-nfs.yaml 
+ 1192  k apply -f pers-vol-nfs.yaml 
+ 1193  k apply -f pers-vol-claim-nfs.yaml 
+ 1194  k apply -f depl-bbox-pvc-nfs.yaml 
+ 1195  k get po
+ 1196  sudo cat /home/nfsshared/data 
+ 1197  k delete deployments/pvc-nfs-depl 
+ 1198  k get po
+ 1199  k get po -o wide
+ 1200  k apply -f depl-bbox-pvc-nfs.yaml 
+ 1201  k get po -o wide
+ 1202  sudo cat /home/nfsshared/data 
+ 1203  cd ..
+ 1204  ./get_helm.sh 
+ 1205  helm version
+ 1206  helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+ 1207  helm repo update
+ 1208  helm repo add stable https://charts.helm.sh/stable
+ 1209  helm repo update
+ 1210  helm install prometheus prometheus-community/kube-prometheus-stack
+ 1211  k port-forward deployments/prometheus-grafana 3000
+ 1212  history > history/history_day10_dock01
